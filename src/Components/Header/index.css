@@ -1,0 +1,16 @@
+.Header{
+    height: 150px;
+    background-color: aqua;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+
+.Header__Logo{
+    height:100%;
+}
