@@ -1,4 +1,5 @@
-import { MdOutlineMenu, MdOutlineApps } from "react-icons/md";
+import { MdOutlineApps } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
 import "./index.css";
 
 const Menu = () => {
@@ -10,11 +11,11 @@ const Menu = () => {
                 </div>
                 <div className="Menu__Icons">
                     <div className="Menu__Icons__Container">
-                        <MdOutlineMenu size={43} className="Menu__Icons__Item Menu__Icons__Item__List"/>
+                        <GiHamburgerMenu size={34} color={"black"} className="Menu__Icons__Item Menu__Icons__Item__List"/>
                         <span className="Menu__Icons__Text">List</span>
                     </div>
                     <div className="Menu__Icons__Container">
-                        <MdOutlineApps size={35} className="Menu__Icons__Item Menu__Icons__Item__Grid"/>
+                        <MdOutlineApps color={"black"} size={35} className="Menu__Icons__Item Menu__Icons__Item__Grid"/>
                         <span className="Menu__Icons__Text Menu__Icons__Text__Grid">Grid</span>
                     </div>
                 </div>
