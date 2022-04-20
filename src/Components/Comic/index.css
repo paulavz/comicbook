@@ -1,0 +1,25 @@
+.Comic__Pagination__Button {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: none;
+  margin-right: 0.5em;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 800;
+  background-color: #00c496;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Comic__Pagination {
+  width: 98%;
+}
+.Comic__Pagination__Button__Active {
+  border: #038d6d solid 2px;
+}
+
+.Comic__Pagination__Button__Color {
+  background-color: #ececec;
+}
