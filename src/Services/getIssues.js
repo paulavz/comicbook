@@ -12,6 +12,7 @@ export const getIssues = async (page = 1, limit = 24) => {
       date: d.date_added,
       name: d.volume.name,
       numberIssues: d.issue_number,
+      id:d.id
     }));
     return result;
   } catch (error) {

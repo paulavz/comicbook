@@ -46,6 +46,8 @@
 .Menu__Icons__Container{
     display: flex;
     align-items: center;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 .Menu__Icons__Item__List{

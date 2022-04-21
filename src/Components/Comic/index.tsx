@@ -10,6 +10,7 @@ const Comic = () => {
   const [page, setPage] = useState<number>(1);
   const [comicIssues, setComicIssues] = useState<IComicIssues[]>([]);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [error,setError]=useState<boolean>(false);
 
   useEffect(() => {
     setIsLoaded(false);
@@ -21,6 +22,7 @@ const Comic = () => {
           setIsLoaded(true);
         }
       } catch (error) {
+        setError(true)
         setIsLoaded(true);
         console.log(error);
       }
@@ -30,6 +32,7 @@ const Comic = () => {
 
   return (
     <div className="mb-4 mt-4">
+      {error && null}
       {isLoaded ? (
         <>
           <ComicGrid comics={comicIssues} />

@@ -3,4 +3,5 @@ export interface IComicIssues {
   date: string;
   name: string;
   numberIssues: string;
+  id:number;
 }

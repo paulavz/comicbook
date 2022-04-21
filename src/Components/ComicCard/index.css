@@ -3,6 +3,7 @@
   height: 75%;
   width: 100%;
   border: 2px solid black;
+  cursor: pointer;
 }
 
 .Comic__Card {
@@ -12,7 +13,6 @@
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .Comic__Card__Info {
@@ -27,6 +27,7 @@
   font-size: 16px;
   text-align: center;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .Comic__Card__Info p {
@@ -41,8 +42,9 @@
 }
 
 .Comic__Card__Favorite {
-    margin-top: 5px;
+  margin-top: 5px;
   position: relative;
   height: 0;
   width: 100%;
+  cursor: pointer;
 }
