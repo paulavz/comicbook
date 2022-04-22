@@ -1,4 +1,4 @@
-.Header{
+.header{
     height: 150px;
     background-color: aqua;
     background-position: center;
@@ -11,6 +11,6 @@
     border-bottom: 5px solid black;
 }
 
-.Header__Logo{
+.header-logo{
     height:100%;
 }

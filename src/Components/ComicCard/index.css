@@ -1,12 +1,12 @@
-.Comic__Card__Image {
+.comic-card-image {
   border-radius: 10px;
+  border: 2px solid black;
   height: 75%;
   width: 100%;
-  border: 2px solid black;
   cursor: pointer;
 }
 
-.Comic__Card {
+.comic-card {
   padding: 2px;
   height: 350px;
   display: flex;
@@ -15,7 +15,7 @@
   border-radius: 10px;
 }
 
-.Comic__Card__Info {
+.comic-card-info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,25 +23,25 @@
   height: 25%;
 }
 
-.Comic__Card__Info h3 {
+.comic-card-info h3 {
   font-size: 16px;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
 }
 
-.Comic__Card__Info p {
+.comic-card-info p {
   font-size: 10px;
   color: "#ECECEC";
 }
 
-.Comic__Card__Info__Icons {
+.comic-card-info-icons {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-.Comic__Card__Favorite {
+.comic-card-favorite {
   margin-top: 5px;
   position: relative;
   height: 0;

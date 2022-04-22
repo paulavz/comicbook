@@ -1,69 +1,69 @@
-.Menu {
-    height: 80px;
+.menu {
+  height: 80px;
 }
 
-.Menu__Container{
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-right: 60px;
+.menu-container {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
-.Menu__Border{
-    height: 100%;
-    display: flex;
-    justify-content: center;
+.menu-border {
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.Menu__Border__Item{
-    width: 95%;
-    height: 5px;
-    background-color: black;
+.menu-border-item {
+  width: 95%;
+  height: 5px;
+  background-color: black;
 }
 
-.Menu__Subtitle{
-    display: flex;
-    align-items: flex-end;
+.menu-subtitle {
+  display: flex;
+  align-items: flex-end;
 }
 
-.Menu__Subtitle__Text{
-    font-weight: 500;
-    font-size: 25px;    
-    margin-bottom: 10px;
+.menu-subtitle-text {
+  font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 
-.Menu__Icons__Text{
-    font-size: 20px;
+.menu-icons-text {
+  font-size: 20px;
 }
 
-.Menu__Icons{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 10px;
+.menu-icons {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
 }
 
-.Menu__Icons__Container{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 500;
+.menu-icons-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-.Menu__Icons__Item__List{
-    margin-right: 5px;
-    margin-bottom: 4px;
+.menu-icons-item-list {
+  margin-right: 5px;
+  margin-bottom: 4px;
 }
 
-.Menu__Icons__Item__Grid{
-    margin-bottom: 4px;
-    margin-right: 5px;
+.menu-icons-item-grid {
+  margin-bottom: 4px;
+  margin-right: 5px;
 }
 
-.Menu__Icons__Text__Grid{
-    margin-bottom: 3px;
+.menu-icons-text-grid {
+  margin-bottom: 3px;
 }
 
-.Menu__Icons__Text{
-    margin-right: 10px;
+.menu-icons-text {
+  margin-right: 10px;
 }

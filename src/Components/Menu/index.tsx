@@ -9,24 +9,24 @@ const Menu = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className="Menu">
-      <div className="Menu__Container">
-        <div className="Menu__Subtitle">
-          <span className="Menu__Subtitle__Text">Latest Issues</span>
+    <div className="menu">
+      <div className="menu-container">
+        <div className="menu-subtitle">
+          <span className="menu-subtitle-text">Latest Issues</span>
         </div>
-        <div className="Menu__Icons">
+        <div className="menu-icons">
           <div
             onClick={() => dispatch(toggleGridState(false))}
-            className="Menu__Icons__Container"
+            className="menu-icons-container"
           >
             <GiHamburgerMenu
               size={34}
               color={isGrid ? "black" : "#00c496" }
-              className="Menu__Icons__Item Menu__Icons__Item__List"
+              className="menu-icons-item menu-icons-item-list"
             />
             <span
               style={{ color: isGrid ? "black" : "#00c496" }}
-              className="Menu__Icons__Text"
+              className="menu-icons-text"
             >
               List
             </span>
@@ -35,19 +35,19 @@ const Menu = () => {
             <MdOutlineApps
               color={isGrid ? "#00c496" : "black"}
               size={35}
-              className="Menu__Icons__Item Menu__Icons__Item__Grid"
+              className="menu-icons-item menu-icons-item-grid"
             />
             <span
               style={{ color: isGrid ? "#00c496" : "black" }}
-              className="Menu__Icons__Text Menu__Icons__Text__Grid"
+              className="menu-icons-text menu-icons-text-grid"
             >
               Grid
             </span>
           </div>
         </div>
       </div>
-      <div className="Menu__Border">
-        <div className="Menu__Border__Item"></div>
+      <div className="menu-border">
+        <div className="menu-border-item"></div>
       </div>
     </div>
   );

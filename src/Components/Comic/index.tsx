@@ -5,12 +5,15 @@ import { BiCaretRight, BiCaretLeft } from "react-icons/bi";
 import "./index.css";
 import ComicGrid from "../ComicGrid";
 import { IComicIssues } from "../../Models/Comics";
+import ComicList from "../ComicList";
+import { useAppSelector } from "../../Redux/Hooks";
 
 const Comic = () => {
   const [page, setPage] = useState<number>(1);
   const [comicIssues, setComicIssues] = useState<IComicIssues[]>([]);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [error,setError]=useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const isGrid = useAppSelector((state) => state.view.isGrid);
 
   useEffect(() => {
     setIsLoaded(false);
@@ -22,7 +25,7 @@ const Comic = () => {
           setIsLoaded(true);
         }
       } catch (error) {
-        setError(true)
+        setError(true);
         setIsLoaded(true);
         console.log(error);
       }
@@ -35,37 +38,37 @@ const Comic = () => {
       {error && null}
       {isLoaded ? (
         <>
-          <ComicGrid comics={comicIssues} />
-          <div className="d-flex Comic__Pagination justify-content-end">
+          {isGrid ? <ComicGrid comics={comicIssues} /> : <ComicList comics={comicIssues}/>}
+          <div className="d-flex comic-pagination justify-content-end">
             {page === 1 ? null : (
               <button
                 onClick={() => setPage(page - 1)}
-                className="Comic__Pagination__Button Comic__Pagination__Button__Active"
+                className="comic-pagination-button comic-pagination-button-active"
               >
                 <BiCaretLeft color={"white"} size={30} />
               </button>
             )}
             <button
-              className="Comic__Pagination__Button"
+              className="comic-pagination-button"
               style={{ backgroundColor: "#038d6d" }}
             >
               {page}
             </button>
             <button
               onClick={() => setPage(page + 1)}
-              className="Comic__Pagination__Button"
+              className="comic-pagination-button"
             >
               {page + 1}
             </button>
             <button
               onClick={() => setPage(page + 2)}
-              className="Comic__Pagination__Button"
+              className="comic-pagination-button"
             >
               {page + 2}
             </button>
             <button
               onClick={() => setPage(page + 1)}
-              className="Comic__Pagination__Button Comic__Pagination__Button__Active"
+              className="comic-pagination-button comic-pagination-button-active"
             >
               <BiCaretRight color={"white"} size={30} />
             </button>

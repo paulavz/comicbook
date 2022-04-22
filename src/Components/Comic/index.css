@@ -1,4 +1,8 @@
-.Comic__Pagination__Button {
+.comic_pagination {
+  width: 98%;
+}
+
+.comic-pagination-button {
   border-radius: 50%;
   height: 35px;
   width: 35px;
@@ -13,13 +17,10 @@
   justify-content: center;
 }
 
-.Comic__Pagination {
-  width: 98%;
-}
-.Comic__Pagination__Button__Active {
+.comic-pagination-button-active {
   border: #038d6d solid 2px;
 }
 
-.Comic__Pagination__Button__Color {
+.comic-pagination-button-color {
   background-color: #ececec;
 }

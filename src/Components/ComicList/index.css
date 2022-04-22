@@ -1,0 +1,21 @@
+.comic-list-container {
+  height: 250px;
+}
+
+.comic-list-image {
+  height: 280px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.comic-list-icon{
+    margin: 10px;
+    position: relative;
+    bottom: 2px;
+    cursor: pointer;
+}
+
+.comic-list-title{
+    margin-left: 10px;
+}
