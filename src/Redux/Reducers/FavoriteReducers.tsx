@@ -3,7 +3,7 @@ import {
   REMOVE_FAVORITE,
   TOGGLE_FAVORITE,
 } from "../Actions/types";
-import { FavoriteAction, FavoriteState } from "../Models/IFavorite";
+import { FavoriteAction, FavoriteState } from "../Models/Favorite";
 
 const initialState: FavoriteState = {
   favorites: [],

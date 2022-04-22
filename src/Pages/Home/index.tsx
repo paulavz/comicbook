@@ -8,10 +8,9 @@ const Home = () => {
   return (
     <div className="home">
       <Header />
-      <Menu />
+      <Menu title="Latest Issues" showMenu={true} />
       <Comic />
     </div>
   );
 };
-
 export default Home;

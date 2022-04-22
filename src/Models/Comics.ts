@@ -4,4 +4,5 @@ export interface IComicIssues {
   name: string;
   numberIssues: string;
   id:number;
+  api_detail_url:string;
 }
