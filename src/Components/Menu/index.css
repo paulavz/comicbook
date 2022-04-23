@@ -45,18 +45,19 @@
 .menu-icons-container {
   display: flex;
   align-items: center;
-  cursor: pointer;
   font-weight: 500;
 }
 
 .menu-icons-item-list {
   margin-right: 5px;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .menu-icons-item-grid {
   margin-bottom: 4px;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .menu-icons-text-grid {

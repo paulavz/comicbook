@@ -1,12 +1,12 @@
 import {
-  ADD_FAVORITE,
-  REMOVE_FAVORITE,
   TOGGLE_FAVORITE,
 } from "../Actions/types";
 import { FavoriteAction, FavoriteState } from "../Models/Favorite";
 
+const favoriteStorage = localStorage.getItem('favorite');
+
 const initialState: FavoriteState = {
-  favorites: [],
+  favorites: (favoriteStorage === null) ? [] : JSON.parse(favoriteStorage),
 };
 
 const FavoriteReducers = (
@@ -14,27 +14,6 @@ const FavoriteReducers = (
   action: FavoriteAction
 ): FavoriteState => {
   switch (action.type) {
-    case ADD_FAVORITE:
-      let newFavorite: number[] = [];
-      state.favorites.forEach((data) => {
-        if (data === action.favorite) {
-          newFavorite = state.favorites;
-        }
-      });
-      if (newFavorite.length === 0) {
-        newFavorite = state.favorites.concat(action.favorite);
-      }
-      return {
-        favorites: newFavorite,
-      };
-    case REMOVE_FAVORITE:
-      const updatedFavorites: number[] = state.favorites.filter(
-        (favorite) => favorite !== action.favorite
-      );
-      return {
-        ...state,
-        favorites: updatedFavorites,
-      };
     case TOGGLE_FAVORITE:
       let favoriteNew: number[] = [];
       let isRepeat = false;
@@ -50,6 +29,7 @@ const FavoriteReducers = (
       } else {
         favoriteNew = state.favorites.concat(action.favorite);
       }
+      localStorage.setItem('favorite',JSON.stringify(favoriteNew))
       return {
         favorites: favoriteNew,
       };

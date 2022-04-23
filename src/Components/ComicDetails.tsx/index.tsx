@@ -16,10 +16,12 @@ const ComicDetails = () => {
     setIsLoaded(false);
     const callDetails = async () => {
       try {
-        const res = await getIssues(url);
+        const cod = url.split("/").at(-2);
+        const res = await getIssues(
+          `http://localhost:4000/api/comic/detail?cod=${cod}`
+        );
         if (res) {
           setIsLoaded(true);
-          console.log(res);
           setComicInfo(res);
         }
       } catch (error) {
@@ -41,74 +43,96 @@ const ComicDetails = () => {
           ) : (
             <div className="container">
               <div className="row">
-                <div className="col-7">
+                <div className="col-12 col-sm-7 order-2 order-sm-1 mb-4">
                   <span className="menu-subtitle-text comic-details-text">
                     Character
                   </span>
                   <div className="menu-border">
                     <div className="menu-border-item"></div>
                   </div>
-                  {comicInfo?.character_credits?.length > 0 ? (
-                    comicInfo.character_credits.map((car: any) => (
-                      <div>
-                        <span>{car.name}</span>
-                        <ThumbImage url={car.api_detail_url} />
-                      </div>
-                    ))
-                  ) : (
-                    <p>Not available</p>
-                  )}
+                  <div className="row ms-4">
+                    {comicInfo?.character_credits?.length > 0 ? (
+                      comicInfo.character_credits.map((car: any) => (
+                        <div
+                          key={car.name}
+                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                        >
+                          <ThumbImage url={car.api_detail_url} />
+                          <span className="ms-3 comic-details-text-thumb">{car.name}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <p>Not available</p>
+                    )}
+                  </div>
                   <span className="menu-subtitle-text comic-details-text">
                     Teams
                   </span>
                   <div className="menu-border">
                     <div className="menu-border-item"></div>
                   </div>
-
-                  {comicInfo?.team_credits?.length > 0 ? (
-                    comicInfo.team_credits.map((team: any) => (
-                      <div key={team.name}>
-                        <span>{team.name}</span>
-                        <ThumbImage url={team.api_detail_url} />
-                      </div>
-                    ))
-                  ) : (
-                    <p>Not available</p>
-                  )}
+                  <div className="row ms-4">
+                    {comicInfo?.team_credits?.length > 0 ? (
+                      comicInfo.team_credits.map((team: any) => (
+                        <div
+                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          key={team.name}
+                        >
+                          <ThumbImage url={team.api_detail_url} />
+                          <span className="ms-3 comic-details-text-thumb">{team.name}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <p>Not available</p>
+                    )}
+                  </div>
                   <span className="menu-subtitle-text comic-details-text">
                     Locations
                   </span>
                   <div className="menu-border">
                     <div className="menu-border-item"></div>
                   </div>
-                  {comicInfo?.location_credits?.length > 0 ? (
-                    comicInfo.location_credits.map((location: any) => (
-                      <div key={location.name}>
-                        <span>{location.name}</span>
-                        <ThumbImage url={location.api_detail_url} />
-                      </div>
-                    ))
-                  ) : (
-                    <p>Not available</p>
-                  )}
+                  <div className="row ms-4">
+                    {comicInfo?.location_credits?.length > 0 ? (
+                      comicInfo.location_credits.map((location: any) => (
+                        <div
+                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          key={location.name}
+                        >
+                          <ThumbImage url={location.api_detail_url} />
+                          <span className="ms-3 comic-details-text-thumb">{location.name}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <p>Not available</p>
+                    )}
+                  </div>
                   <span className="menu-subtitle-text comic-details-text">
                     Concepts
                   </span>
                   <div className="menu-border">
                     <div className="menu-border-item"></div>
                   </div>
-                  {comicInfo?.concept_credits?.length > 0 ? (
-                    comicInfo.concept_credits.map((concept: any) => (
-                      <div key={concept.name}><span>{concept.name}</span><ThumbImage url={concept.api_detail_url} /></div>
-                    ))
-                  ) : (
-                    <p>Not available</p>
-                  )}
+                  <div className="row ms-4">
+                    {comicInfo?.concept_credits?.length > 0 ? (
+                      comicInfo.concept_credits.map((concept: any) => (
+                        <div
+                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          key={concept.name}
+                        >
+                          <ThumbImage url={concept.api_detail_url} />
+                          <span className="ms-3 comic-details-text-thumb">{concept.name}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <p>Not available</p>
+                    )}
+                  </div>
                 </div>
-                <div className="col-5 d-flex justify-content-end">
+                <div className="col-12 col-sm-5 order-1 order-sm-1">
                   <div className="comic-details-container-image">
                     <img
-                      className="comic-details-image"
+                      className="comic-details-image img-fluid"
                       src={comicInfo.urlImage}
                       alt="FJKDJDe"
                     />

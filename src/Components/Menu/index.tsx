@@ -7,6 +7,7 @@ import React from "react";
 import { TiArrowBack, TiStarFullOutline, TiStarOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
 import { isFavorite } from "../../Helpers/isFavorite";
+import { toggleFavorite } from "../../Redux/Actions/FavoriteActions";
 
 interface Props {
   title: string;
@@ -20,6 +21,10 @@ const Menu: React.FC<Props> = ({ title, showMenu }) => {
   const favoritesList = useAppSelector((state) => state.favorite.favorites);
   const { id } = useAppSelector((state) => state.comic.comic);
 
+  const handleClick = (index: number) => {
+    dispatch(toggleFavorite(index));
+  };
+
   return (
     <div className="menu">
       <div className="menu-container">
@@ -31,19 +36,21 @@ const Menu: React.FC<Props> = ({ title, showMenu }) => {
                 size={30}
                 className="menu-icon-back"
               />
-              {isFavorite(favoritesList, id) ? (
-                <TiStarFullOutline
-                  className="comic-list-icon"
-                  color={"yellow"}
-                  size={30}
-                />
-              ) : (
-                <TiStarOutline
-                  className="comic-list-icon"
-                  color={"yellow"}
-                  size={30}
-                />
-              )}
+              <span onClick={() => handleClick(id)}>
+                {isFavorite(favoritesList, id) ? (
+                  <TiStarFullOutline
+                    className="comic-list-icon"
+                    color={"yellow"}
+                    size={30}
+                  />
+                ) : (
+                  <TiStarOutline
+                    className="comic-list-icon"
+                    color={"yellow"}
+                    size={30}
+                  />
+                )}
+              </span>
             </>
           )}
           <span className="menu-subtitle-text">{title}</span>

@@ -7,15 +7,24 @@
   width: 200px;
   border-radius: 10px;
   border: 2px solid black;
+  cursor: pointer;
 }
 
-.comic-list-icon{
-    margin: 10px;
-    position: relative;
-    bottom: 2px;
-    cursor: pointer;
+.comic-list-icon {
+  margin: 10px;
+  position: relative;
+  bottom: 2px;
+  cursor: pointer;
 }
 
-.comic-list-title{
-    margin-left: 10px;
+.comic-list-title {
+  margin-left: 10px;
+}
+
+.comic-list-name {
+  cursor: pointer;
+}
+
+.comic-list-name:hover {
+  color: #00c496;
 }
