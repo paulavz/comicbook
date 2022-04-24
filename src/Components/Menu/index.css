@@ -77,3 +77,16 @@
   color: #00c496 !important;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .menu-icons-text {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .menu-container {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+}
