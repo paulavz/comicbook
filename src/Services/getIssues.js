@@ -6,7 +6,7 @@ export const getIssues = async (page = 1, limit = 24) => {
   try {
     //   let res = await API.get(`${URLAPI}comic?limit=${limit}&offset=${nroPage}`);
     let res = await API.get(
-      `https://comicvine.gamespot.com/api/issues/?api_key=${TOKEN}&format=json&limit=${limit}&offset=${nroPage}`
+      `https://cors-anywhere.herokuapp.com/https://comicvine.gamespot.com/api/issues/?api_key=${TOKEN}&format=json&limit=${limit}&offset=${nroPage}`
     );
     const result = res.data.results.map((d) => ({
       urlImage: d.image.original_url,
