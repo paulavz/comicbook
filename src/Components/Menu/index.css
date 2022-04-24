@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 500px) {
   .menu-container {
     margin-left: 5px !important;
     margin-right: 5px !important;
