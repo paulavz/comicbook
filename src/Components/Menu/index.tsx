@@ -53,7 +53,7 @@ const Menu: React.FC<Props> = ({ title, showMenu }) => {
               </span>
             </>
           )}
-          <span className="menu-subtitle-text">{title}</span>
+          <span className="fs-5 menu-subtitle-text">{title}</span>
         </div>
         {showMenu && (
           <div className="menu-icons">
@@ -68,7 +68,7 @@ const Menu: React.FC<Props> = ({ title, showMenu }) => {
               />
               <span
                 style={{ color: isGrid ? "black" : "#00c496" }}
-                className="menu-icons-text"
+                className="fs-5 menu-icons-text"
               >
                 List
               </span>
@@ -84,7 +84,7 @@ const Menu: React.FC<Props> = ({ title, showMenu }) => {
               />
               <span
                 style={{ color: isGrid ? "#00c496" : "black" }}
-                className="menu-icons-text menu-icons-text-grid"
+                className="fs-5 menu-icons-text menu-icons-text-grid"
               >
                 Grid
               </span>

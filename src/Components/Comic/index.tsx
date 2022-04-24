@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { getIssues } from "../../Services/getIssues";
 import Spinkit from "../Spinkit";
 import { BiCaretRight, BiCaretLeft } from "react-icons/bi";
-import "./index.css";
 import ComicGrid from "../ComicGrid";
 import { IComicIssues } from "../../Models/Comics";
 import ComicList from "../ComicList";
 import { useAppSelector } from "../../Redux/Hooks";
+import "./index.css";
 
 const Comic = () => {
   const [page, setPage] = useState<number>(1);

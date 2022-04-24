@@ -17,9 +17,7 @@ const ComicDetails = () => {
     const callDetails = async () => {
       try {
         const cod = url.split("/").at(-2);
-        const res = await getIssues(
-          `http://localhost:4000/api/comic/detail?cod=${cod}`
-        );
+        const res = await getIssues(cod);
         if (res) {
           setIsLoaded(true);
           setComicInfo(res);
@@ -41,10 +39,10 @@ const ComicDetails = () => {
           error ? (
             <p>An error has occurred</p>
           ) : (
-            <div className="container">
+            <div className="container-md">
               <div className="row">
                 <div className="col-12 col-sm-7 order-2 order-sm-1 mb-4">
-                  <span className="menu-subtitle-text comic-details-text">
+                  <span className="fs-5 mt-2 menu-subtitle-text comic-details-text">
                     Character
                   </span>
                   <div className="menu-border">
@@ -65,7 +63,7 @@ const ComicDetails = () => {
                       <p>Not available</p>
                     )}
                   </div>
-                  <span className="menu-subtitle-text comic-details-text">
+                  <span className="fs-5 mt-2 menu-subtitle-text comic-details-text">
                     Teams
                   </span>
                   <div className="menu-border">
@@ -86,7 +84,7 @@ const ComicDetails = () => {
                       <p>Not available</p>
                     )}
                   </div>
-                  <span className="menu-subtitle-text comic-details-text">
+                  <span className="fs-5 mt-2 menu-subtitle-text comic-details-text">
                     Locations
                   </span>
                   <div className="menu-border">
@@ -107,7 +105,7 @@ const ComicDetails = () => {
                       <p>Not available</p>
                     )}
                   </div>
-                  <span className="menu-subtitle-text comic-details-text">
+                  <span className="fs-5 mt-2 menu-subtitle-text comic-details-text">
                     Concepts
                   </span>
                   <div className="menu-border">

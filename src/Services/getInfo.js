@@ -1,8 +1,9 @@
 import API from "./Config";
+const URLAPI = process.env.REACT_APP_ENDPOINT_API
 
-export const getIssues = async (url) => {
+export const getIssues = async (cod) => {
   try {
-    let res = await API.get(url);
+    let res = await API.get(`${URLAPI}comic/detail?cod=${cod}`);
     const object = res.data.results;
     const result = {
       urlImage: object.image.original_url,
