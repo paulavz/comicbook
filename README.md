@@ -6,7 +6,7 @@ Visit to the backend in https://github.com/paulavz/basic_backend
 
 Production back in https://comic-sundev.herokuapp.com/api/
 
-Visit production deploy in https://develop--beautiful-squirrel-6d0b03.netlify.app/
+Visit production deploy in https://deploy-preview-1--beautiful-squirrel-6d0b03.netlify.app/
 
 ## Available Scripts
 
