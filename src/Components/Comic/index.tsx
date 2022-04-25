@@ -23,11 +23,13 @@ const Comic = () => {
         if (res) {
           setComicIssues(res);
           setIsLoaded(true);
+        } else {
+          setError(true);
+          setIsLoaded(true);
         }
       } catch (error) {
         setError(true);
         setIsLoaded(true);
-        console.log(error);
       }
     };
     callIssues();
@@ -35,10 +37,13 @@ const Comic = () => {
 
   return (
     <div className="mb-4 mt-4">
-      {error && null}
-      {isLoaded ? (
+      {!error ? isLoaded ? (
         <>
-          {isGrid ? <ComicGrid comics={comicIssues} /> : <ComicList comics={comicIssues}/>}
+          {isGrid ? (
+            <ComicGrid comics={comicIssues} />
+          ) : (
+            <ComicList comics={comicIssues} />
+          )}
           <div className="d-flex comic-pagination justify-content-end">
             {page === 1 ? null : (
               <button
@@ -76,7 +81,7 @@ const Comic = () => {
         </>
       ) : (
         <Spinkit />
-      )}
+      ):<div className="comic-error-container d-flex justify-content-center align-items-center">An error has occurred</div>}
     </div>
   );
 };

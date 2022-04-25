@@ -24,3 +24,10 @@
 .comic-pagination-button-color {
   background-color: #ececec;
 }
+
+.comic-error-container{
+  width: 100%;
+  height: 250px;
+  color: #e91c17;
+  font-weight: bold;
+}

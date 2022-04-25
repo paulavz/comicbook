@@ -33,7 +33,7 @@ const ComicList: React.FC<Props> = ({ comics }) => {
 
   return (
     <div className="container" style={{ marginTop: -20, marginBottom: 20 }}>
-      {comics.map((comic) => (
+      {comics?.length > 0 && comics.map((comic) => (
         <div key={comic.id}>
           <div className="row pb-4 pt-4 d-flex justify-content-center ">
             <div className="col-lg-3 col-sm-4 col-12 d-flex justify-content-center">

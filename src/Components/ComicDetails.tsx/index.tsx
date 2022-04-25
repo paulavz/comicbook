@@ -21,6 +21,9 @@ const ComicDetails = () => {
         if (res) {
           setIsLoaded(true);
           setComicInfo(res);
+        } else {
+          setError(true);
+          setIsLoaded(true);
         }
       } catch (error) {
         setError(true);
@@ -37,7 +40,7 @@ const ComicDetails = () => {
       <div>
         {isLoaded ? (
           error ? (
-            <p>An error has occurred</p>
+            <div className="comic-error-container d-flex justify-content-center align-items-center">An error has occurred</div>
           ) : (
             <div className="container-md">
               <div className="row">
@@ -56,7 +59,9 @@ const ComicDetails = () => {
                           className="col-6 d-flex align-items-center mt-2 mb-2"
                         >
                           <ThumbImage url={car.api_detail_url} />
-                          <span className="ms-3 comic-details-text-thumb">{car.name}</span>
+                          <span className="ms-3 comic-details-text-thumb">
+                            {car.name}
+                          </span>
                         </div>
                       ))
                     ) : (
@@ -77,7 +82,9 @@ const ComicDetails = () => {
                           key={team.name}
                         >
                           <ThumbImage url={team.api_detail_url} />
-                          <span className="ms-3 comic-details-text-thumb">{team.name}</span>
+                          <span className="ms-3 comic-details-text-thumb">
+                            {team.name}
+                          </span>
                         </div>
                       ))
                     ) : (
@@ -98,7 +105,9 @@ const ComicDetails = () => {
                           key={location.name}
                         >
                           <ThumbImage url={location.api_detail_url} />
-                          <span className="ms-3 comic-details-text-thumb">{location.name}</span>
+                          <span className="ms-3 comic-details-text-thumb">
+                            {location.name}
+                          </span>
                         </div>
                       ))
                     ) : (
@@ -119,7 +128,9 @@ const ComicDetails = () => {
                           key={concept.name}
                         >
                           <ThumbImage url={concept.api_detail_url} />
-                          <span className="ms-3 comic-details-text-thumb">{concept.name}</span>
+                          <span className="ms-3 comic-details-text-thumb">
+                            {concept.name}
+                          </span>
                         </div>
                       ))
                     ) : (
