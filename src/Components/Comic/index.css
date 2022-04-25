@@ -1,0 +1,33 @@
+.comic_pagination {
+  width: 98%;
+}
+
+.comic-pagination-button {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: none;
+  margin-right: 0.5em;
+  color: white;
+  font-family: "Roboto";
+  font-weight: 800;
+  background-color: #00c496;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comic-pagination-button-active {
+  border: #038d6d solid 2px;
+}
+
+.comic-pagination-button-color {
+  background-color: #ececec;
+}
+
+.comic-error-container{
+  width: 100%;
+  height: 250px;
+  color: #e91c17;
+  font-weight: bold;
+}

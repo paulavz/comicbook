@@ -1,0 +1,18 @@
+.comic-details-text {
+  margin-left: 10%;
+}
+
+.comic-details-image {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.comic-details-container-image {
+  padding: 20px;
+  height: 65%;
+}
+
+.comic-details-text-thumb{
+    color: #038d6d;
+    font-weight: 500;
+}
