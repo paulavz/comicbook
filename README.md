@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Hello! My name is Paula Suarez 😁
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my little comic project, I hope your experience is entertaining.🌟
+
+Visit to the backend in https://github.com/paulavz/basic_backend
+
+Production back in https://comic-sundev.herokuapp.com/api/
+
+Visit production deploy in https://develop--beautiful-squirrel-6d0b03.netlify.app/
 
 ## Available Scripts
 
