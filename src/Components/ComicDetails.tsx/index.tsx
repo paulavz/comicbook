@@ -56,7 +56,7 @@ const ComicDetails = () => {
                       comicInfo.character_credits.map((car: any) => (
                         <div
                           key={car.name}
-                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          className="col-12 col-sm-6 d-flex align-items-center mt-2 mb-2"
                         >
                           <ThumbImage url={car.api_detail_url} />
                           <span className="ms-3 comic-details-text-thumb">
@@ -78,7 +78,7 @@ const ComicDetails = () => {
                     {comicInfo?.team_credits?.length > 0 ? (
                       comicInfo.team_credits.map((team: any) => (
                         <div
-                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          className="col-sm-6 col-12 d-flex align-items-center mt-2 mb-2"
                           key={team.name}
                         >
                           <ThumbImage url={team.api_detail_url} />
@@ -101,7 +101,7 @@ const ComicDetails = () => {
                     {comicInfo?.location_credits?.length > 0 ? (
                       comicInfo.location_credits.map((location: any) => (
                         <div
-                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          className="col-sm-6 col-12 d-flex align-items-center mt-2 mb-2"
                           key={location.name}
                         >
                           <ThumbImage url={location.api_detail_url} />
@@ -124,7 +124,7 @@ const ComicDetails = () => {
                     {comicInfo?.concept_credits?.length > 0 ? (
                       comicInfo.concept_credits.map((concept: any) => (
                         <div
-                          className="col-6 d-flex align-items-center mt-2 mb-2"
+                          className="col-sm-6 col-12 d-flex align-items-center mt-2 mb-2"
                           key={concept.name}
                         >
                           <ThumbImage url={concept.api_detail_url} />
